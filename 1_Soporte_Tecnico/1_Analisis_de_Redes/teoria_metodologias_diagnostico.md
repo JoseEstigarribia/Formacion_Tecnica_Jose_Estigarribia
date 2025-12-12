@@ -38,7 +38,7 @@ ping 192.168.1.x
 
 ¿Está repartiendo IP el DHCP?
 
-¿Se puede entrar al panel del router (192.168.1.1)?*
+¿Se puede entrar al panel del router (192.168.1.x)?*
 
 👉 Si falla acá, el problema es de la red del hogar.
 
