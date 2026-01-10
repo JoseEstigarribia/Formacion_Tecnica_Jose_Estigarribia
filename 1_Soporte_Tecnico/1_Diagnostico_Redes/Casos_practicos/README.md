@@ -1,6 +1,6 @@
 
-Caso 001 – Error DHCP / IP 169.254 (APIPA)
-🧩 Escenario
+#Caso 001 – Error DHCP / IP 169.254 (APIPA)
+Escenario
 PC conectada por WiFi. Ícono de red con signo de admiración.
 Al ejecutar ipconfig, aparece IP 169.254.x.x.
 
