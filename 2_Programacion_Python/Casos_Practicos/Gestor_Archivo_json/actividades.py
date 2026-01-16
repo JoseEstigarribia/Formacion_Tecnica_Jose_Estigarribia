@@ -1,23 +1,39 @@
 import json
+print("SCRIPT GESTION ACTIVIDADES EN JSON   ")
 
-try:
-    with open("Actividades.json", "r", encoding="utf-8") as archivo:
-        actividades = json.load(archivo)
 
-except FileNotFoundError:
-    actividades = []
+def cargar_actividades():
+        try:
+            with open("Actividades.json","r") as archivo:
+                return json.load(archivo)
 
-nueva_actividad = {
-    "Nombre": "Estudiar Python",
-    "Fecha": "10/01/2026",
-    "Estado": "Hecho"
-}
+        except FileNotFoundError:
+            lista = []
+            with open("Actividades.json","w") as archivo:
+                json.dump(lista,archivo,indent=4)
+                
+                return lista 
 
-if nueva_actividad not in actividades:
-    actividades.append(nueva_actividad)
+def guardar_actividades(nueva_actividad):
 
-with open("Actividades.json", "w", encoding="utf-8") as archivo:
-    json.dump(actividades, archivo, indent=4, ensure_ascii=False)
+        #Partiendo de los Actividades cargadas, si no son duplicada Agregamos, usamos funciones anidadas.
+        actividades = cargar_actividades()
+        if nueva_actividad not in actividades:
+            actividades.append(nueva_actividad)
 
-print("Actividades guardadas correctamente.")
+            with open("Actividades.json","w") as archivo:
+                json.dump(actividades,archivo, indent=4)  
+            print("Actividades actualizadas")
+            return actividades
+        else:
+             print("Actividad no actualizada, Repetida")   
+             return actividades  
 
+
+nueva_actividad =  {
+            "Nombre": "Estudiar python",
+            "Fecha": "13/1/26",
+            "Estado" : "Pendiente"
+
+        }
+print(guardar_actividades(nueva_actividad))
