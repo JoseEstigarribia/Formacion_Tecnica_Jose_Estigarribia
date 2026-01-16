@@ -1,15 +1,16 @@
 import json
 print("SCRIPT GESTION ACTIVIDADES EN JSON   ")
 
+ARCHIVO = "actividades.json"
 
 def cargar_actividades():
         try:
-            with open("Actividades.json","r") as archivo:
+            with open(ARCHIVO,"r") as archivo:
                 return json.load(archivo)
 
         except FileNotFoundError:
             lista = []
-            with open("Actividades.json","w") as archivo:
+            with open(ARCHIVO,"w") as archivo:
                 json.dump(lista,archivo,indent=4)
                 
                 return lista 
@@ -21,7 +22,7 @@ def guardar_actividades(nueva_actividad):
         if nueva_actividad not in actividades:
             actividades.append(nueva_actividad)
 
-            with open("Actividades.json","w") as archivo:
+            with open(ARCHIVO,"w") as archivo:
                 json.dump(actividades,archivo, indent=4)  
             print("Actividades actualizadas")
             return actividades
@@ -29,11 +30,11 @@ def guardar_actividades(nueva_actividad):
              print("Actividad no actualizada, Repetida")   
              return actividades  
 
+if __name__ == "__main__":
+    nueva_actividad =  {
+                "Nombre": "Estudiar python",
+                "Fecha": "13/1/26",
+                "Estado" : "Pendiente"
 
-nueva_actividad =  {
-            "Nombre": "Estudiar python",
-            "Fecha": "13/1/26",
-            "Estado" : "Pendiente"
-
-        }
-print(guardar_actividades(nueva_actividad))
+            }
+    print(guardar_actividades(nueva_actividad))
