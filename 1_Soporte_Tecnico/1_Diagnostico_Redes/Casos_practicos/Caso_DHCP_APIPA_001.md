@@ -1,37 +1,64 @@
 # Caso 001 – Error DHCP / IP 169.254 (APIPA)
-
 ## 🧩 Escenario
-PC conectada por WiFi. Ícono de red con signo de admiración.  
-Al ejecutar `ipconfig`, aparece IP **169.254.x.x**.
 
-Un celular conectado al mismo WiFi sí tiene Internet.
+PC conectada por WiFi.
+Ícono de red con signo de admiración.
+Al ejecutar ipconfig, la PC obtiene una IP 169.254.x.x.
+
+Un celular conectado a la misma red WiFi sí tiene acceso a Internet.
 
 ## ❓ Preguntas
-1. ¿Dónde está el problema?
-2. ¿Qué significa esa IP?
-3. ¿Qué comandos usarías?
-4. ¿Qué pasos seguirías para validar la solución?
 
-## 🟢 Diagnostico
-**1. Ubicación del problema:**  
-El proveedor funciona (el celular tiene Internet).  
-El router funciona parcialmente.  
-El problema es **la asignación DHCP entre router y PC**. 
-169.254.x.x es **APIPA**, una IP autogenerada por Windows cuando **no recibe IP por DHCP**.
+¿Dónde se encuentra el problema?
 
-**3. Comandos y Herramientas:**
+¿Qué significa una IP 169.254.x.x?
 
+¿Qué comandos se pueden utilizar para resolverlo?
+
+¿Cómo validar que la solución fue exitosa?
+
+## 🟢 Diagnóstico
+
+El proveedor de Internet funciona correctamente (el celular navega).
+
+El router se encuentra operativo, pero la PC no recibe una IP válida.
+
+La dirección 169.254.x.x (APIPA) indica que Windows no recibió respuesta del servidor DHCP.
+
+El problema se localiza en la asignación DHCP entre el router y la PC.
+
+## 🛠️ Comandos / Herramientas
 ipconfig /release
-
 ipconfig /renew
 
-**4. Pasos Verificacion:**
-- Verificar que ahora tome una IP válida (192.168.x.x)
-- Hacer ping al router (192.168.1.1)
-- Hacer ping a Internet (8.8.8.8)
-- Hacer ping por DNS (google.com)
-- Si falla DNS → `ipconfig /flushdns`
+
+Opcional:
+
+ipconfig /flushdns
+
+## 🔍 Pasos de verificación
+
+Confirmar que la PC obtenga una IP válida (192.168.x.x).
+
+Realizar ping al router:
+
+ping 192.168.1.1
+
+
+Probar conectividad a Internet:
+
+ping 8.8.8.8
+
+
+Probar resolución DNS:
+
+ping google.com
+
+
+Si falla la resolución DNS, limpiar caché con ipconfig /flushdns.
 
 ## 🏁 Conclusión
-La PC recuperó IP válida y volvió a tener acceso a Internet.  
-Diagnóstico correcto y ordenado.
+
+Se restableció correctamente la asignación DHCP.
+La PC obtuvo una IP válida y recuperó el acceso a Internet.
+Diagnóstico y resolución realizados de forma ordenada y efectiva.
