@@ -22,11 +22,13 @@ El problema es **la asignación DHCP entre router y PC**.
 169.254.x.x es **APIPA**, una IP autogenerada por Windows cuando **no recibe IP por DHCP**.
 
 **3. Comandos a usar:**
+
 ipconfig /release
+
 ipconfig /renew
 
-markdown
-Copiar código
+
+
 
 **4. Pasos:**
 - Verificar que ahora tome una IP válida (192.168.x.x)
