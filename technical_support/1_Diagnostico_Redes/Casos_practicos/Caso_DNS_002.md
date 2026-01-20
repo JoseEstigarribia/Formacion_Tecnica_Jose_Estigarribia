@@ -58,10 +58,11 @@ Aplicar solución:
 Revalidar conectividad
 
 # Conclusion
-El problema no estaba relacionado con la conectividad de red, ni con DNS, ya que la PC tenía IP válida y resolvía nombres de dominio correctamente.
 
-Tras descartar problemas de red y gateway, se identificó que el firewall local podía estar bloqueando el acceso a determinadas aplicaciones o servicios web.
+El problema no estaba relacionado con la conectividad de red ni con el gateway, ya que la PC contaba con una IP válida y podía comunicarse con direcciones IP públicas.
 
-Al desactivar temporalmente el firewall para pruebas, se confirmó que la página bloqueada volvió a cargar, validando que el origen del problema era una regla de firewall local.
+La falla se encontraba en la resolución DNS, dado que los comandos de ping a direcciones IP funcionaban correctamente, pero no así los pings a nombres de dominio.
 
-Finalmente, se restableció el firewall y se documentó el incidente para aplicar una regla adecuada o escalar al área correspondiente.
+Luego de limpiar la caché DNS mediante el comando ipconfig /flushdns y/o configurar servidores DNS manuales, se restableció la navegación web correctamente.
+
+El diagnóstico permitió identificar un problema de DNS local en la PC y resolverlo de forma ordenada y efectiva.

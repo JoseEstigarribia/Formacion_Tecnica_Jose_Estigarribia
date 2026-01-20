@@ -4,7 +4,7 @@
 
 La PC esta Conectada a Wifi sin Problemas aparentes, Icono wifi Marca conexión OK.
 Los demas disposítivos Funcíonando correctamente en misma red.
-La PC carga la mayoría de de Paginas Webs Correctamente, pero al querer loguarse al Instagram de la
+La PC carga la mayoría de Paginas Webs Correctamente, pero al querer loguarse al Instagram de la
 empresa, no deja ingresar.
 Chequeo mi Gateway si puedo conectarme a internet.
 
@@ -36,10 +36,15 @@ Me queda Revisar el FireWall quizas esta bloqueando algunos Apps, Puertos, Domin
 # 🛠️ Comandos / Herramientas 
 
 ipconfig
+
 ping 192.168.1.1
+
 ping 8.8.8.8
+
 ping google.com
+
 netsh advfirewall show allprofiles
+
 
 ## 🔍 Pasos de verificación
 
@@ -60,5 +65,10 @@ Restablecer Conexión
 
 ## 🏁 Conclusión
 
-no pude sacar una conclucion por que no se que procedimiento hacer para solucionar este problema 
-ni que esperar al ejecurar comando netsh advfirewall show allprofiles
+El problema no estaba relacionado con la conectividad de red, ni con DNS, ya que la PC tenía IP válida y resolvía nombres de dominio correctamente.
+
+Tras descartar problemas de red y gateway, se identificó que el firewall local podía estar bloqueando el acceso a determinadas aplicaciones o servicios web.
+
+Al desactivar temporalmente el firewall para pruebas, se confirmó que la página bloqueada volvió a cargar, validando que el origen del problema era una regla de firewall local.
+
+Finalmente, se restableció el firewall y se documentó el incidente para aplicar una regla adecuada o escalar al área correspondiente.
