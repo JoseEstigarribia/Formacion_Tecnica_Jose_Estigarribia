@@ -1,4 +1,4 @@
-## Caso 002- Sin conexion a internet IP Valida
+## Caso 002 - Sin conexion a internet IP Valida
 
 # Escenario
 PC conectada por WiFi o cable Ethernet.
@@ -58,8 +58,10 @@ Aplicar solución:
 Revalidar conectividad
 
 # Conclusion
-El problema no era la conectividad a Internet, sino un fallo en la resolución DNS local de la PC.
+El problema no estaba relacionado con la conectividad de red, ni con DNS, ya que la PC tenía IP válida y resolvía nombres de dominio correctamente.
 
-La conexión a la red y el acceso a Internet estaban operativos, El servidor DNS configurado en la PC no respondía correctamente
-a las consultas de resolución de nombres.
-Esto se comprobó al poder hacer ping a direcciones IP públicas, pero no a dominios.
+Tras descartar problemas de red y gateway, se identificó que el firewall local podía estar bloqueando el acceso a determinadas aplicaciones o servicios web.
+
+Al desactivar temporalmente el firewall para pruebas, se confirmó que la página bloqueada volvió a cargar, validando que el origen del problema era una regla de firewall local.
+
+Finalmente, se restableció el firewall y se documentó el incidente para aplicar una regla adecuada o escalar al área correspondiente.
