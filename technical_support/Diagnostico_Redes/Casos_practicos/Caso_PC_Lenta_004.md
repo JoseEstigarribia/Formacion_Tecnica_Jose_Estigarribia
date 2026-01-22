@@ -57,13 +57,13 @@ Antivirus / Defender
 
 Verificar las aplicaciones necesarias para el Arranque de Windows, las que no son necesarias 
 
-se quitaran del arranque sin toncar nada del sistema.(msconfig)
+se quitaran del arranque sin tocar nada del sistema.(msconfig)
 
-Verificaremos el las Apps poco usadas las desinstalaremos para aumentar el espacio del 
+Verificaremos las Apps poco usadas las desinstalaremos para aumentar el espacio del 
 
 disco.(Panel de control / Aplicaciones)
 
-Verificamos el Navegador consume mucho, buscarmos desinstalar extensiones pesadas e ineccesarias.
+Verificamos el Navegador consume mucho, buscarmos desinstalar extensiones pesadas e innecesarias.
 
 Ejecutaremos un analisis profundo del Antivirus para buscar y eliminar archivos malware.
 
