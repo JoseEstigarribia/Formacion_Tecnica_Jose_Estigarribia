@@ -13,7 +13,17 @@ Mostrar constancia, orden y capacidad de resolución de problemas
 
 Construir bases sólidas y demostrables, priorizando la aplicación real por sobre la teoría excesiva
 
-No busco “saber todo”, sino aprender bien los fundamentos y poder aplicarlos.
+Enfocado en desarrollar habilidades técnicas aplicables a entornos reales de soporte IT y automatización básica.
+
+# 🛠️ Competencias desarrolladas
+
+Diagnóstico de conectividad (APIPA, DHCP, DNS)
+
+Administración básica de permisos NTFS
+
+Resolución de incidencias comunes en entorno Windows
+
+Documentación técnica estructurada
 
 # 📁 Áreas de estudio
 **🖥️ Technical Support**
@@ -64,7 +74,7 @@ Casos prácticos planificados a corto plazo
 
 # 📈 Metodología de trabajo
 
-Un área de estudio por día
+Un área de estudio cada 2-3 día
 
 Objetivos pequeños y cerrables
 
