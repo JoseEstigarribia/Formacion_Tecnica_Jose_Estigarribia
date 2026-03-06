@@ -1,4 +1,9 @@
-## Teorias de Redes Basicas
+# 🌐 Redes
 
+Documentación de conceptos y casos prácticos de redes
+aplicados a Soporte IT Jr.
 
-# En construccion
+## 📁 Contenido
+
+- [Día 1 — Modelo OSI](./dia1-modelo-osi.md)
+- [Día 2 — TCP/IP, protocolos y puertos](./dia2-tcp-ip.md)
