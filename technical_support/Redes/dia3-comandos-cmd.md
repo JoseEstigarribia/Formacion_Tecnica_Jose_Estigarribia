@@ -24,7 +24,7 @@ escuchando y detectar conexiones sospechosas.
 
 **Requiere:** CMD normal (sin administrador)
 
-![netstat -an](./cmd-netstat-an.png)
+![netstat -an](./img/cmd-netstat-an.png)
 
 **Las 4 columnas:**
 - **Proto** → protocolo usado, TCP o UDP
@@ -64,7 +64,7 @@ administrador — aprendí qué es UAC con este comando.
 **Requiere:** CMD como administrador (clic derecho → 
 "Ejecutar como administrador")
 
-![netstat -b](./cmd-netstat-b.png)
+![netstat -b](./img/cmd-netstat-b.png)
 
 **Lo que aprendí analizando el output:**
 - `Theft_Deterrent_agent.exe` → sistema antirrobo
@@ -101,7 +101,7 @@ DNS en segundos.
 
 **Requiere:** CMD normal
 
-![nslookup google.com](./cmd-nslookup.png)
+![nslookup google.com](./img/cmd-nslookup.png)
 
 **Análisis del output:**
 ```
