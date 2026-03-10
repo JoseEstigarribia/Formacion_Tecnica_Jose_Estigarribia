@@ -161,7 +161,7 @@ Diferencia clave con IP:
 
 **Lo que vi en mi output:**
 ```
-192.168.1.1    cc-d4-a1-xx-xx-xx    dinámico
+192.168.1.x    cc-d4-a1-xx-xx-xx    dinámico
 ```
 Esta es la MAC de mi router — mi PC la aprendió
 automáticamente cuando necesitó comunicarse con él.
@@ -196,7 +196,7 @@ Buscar en: https://macvendors.com
 **Variantes útiles:**
 ```
 arp -a                  → tabla completa
-arp -a 192.168.1.1      → solo esa IP
+arp -a 192.168.x.x      → solo esa IP
 arp -d                  → borra la tabla (requiere admin)
 ```
 
@@ -259,6 +259,7 @@ Ejecuto `pathping google.com` y analizo dónde sube el RTT:
 Si pathping muestra 0% pérdida y RTT bajo → la red
 está perfecta → el problema es de la aplicación o
 el servidor → escalo con evidencia concreta.
+
 ---
 
 ## 🔑 Resumen del día
