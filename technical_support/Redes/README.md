@@ -7,4 +7,4 @@ aplicados a Soporte IT Jr.
 
 - [Día 1 — Modelo OSI](./dia1-modelo-osi.md)
 - [Día 2 — TCP/IP, protocolos y puertos](./dia2-tcp-ip.md)
-- [Día 3 — Comandos de diagnóstico CMD (netstat, nslookup)](./dia3-comandos-cmd.md)
+- [Día 3 — Comandos de diagnóstico CMD (netstat, nslookup, arp, pathping)](./dia3-comandos-cmd.md)
